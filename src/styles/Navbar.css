@@ -4,12 +4,12 @@
 
 .navbar-container {
     position: relative;
-    width: 1000px;
+    width: 970px;
     margin: auto;
     padding: 8px 0px;
     display: flex;
     justify-content: space-between;
-    padding-right: 30px;
+    padding-right: 60px;
 }
 
 .navbar-container .shape4 {
@@ -17,6 +17,12 @@
     top: 0;
     left: -90px;
     width: 74px;
+}
+.navbar-container .shape3 {
+    position: absolute;
+    top: 0;
+    right: -115px;
+    width: 110px;
 }
 
 .navbar-container .logo {

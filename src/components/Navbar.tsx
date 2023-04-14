@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from "../assets/logo.png"
 import shape4 from "../assets/shape4.png"
+import shape3 from "../assets/shape3.png"
 import "../styles/Navbar.css"
 import {HiOutlineUserAdd} from "react-icons/hi"
 
@@ -9,6 +10,7 @@ const Navbar = () => {
     <div className='navbar'>
       <div className='navbar-container'>
         <img src={shape4} className='shape4' alt="shape4" />
+        <img src={shape3} className='shape3' alt="shape3" />
         <div className='logo'>
           <img src={logo} alt={"logo"} />
           <h2>Enhance AI</h2>
