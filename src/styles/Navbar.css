@@ -1,0 +1,84 @@
+.navbar {
+    border-bottom: 1px solid #e7e3fc;
+}
+
+.navbar-container {
+    position: relative;
+    width: 1000px;
+    margin: auto;
+    padding: 8px 0px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+
+.navbar-container .shape4 {
+    position: absolute;
+    top: 0;
+    left: -90px;
+    width: 74px;
+}
+
+.navbar-container .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar-container .logo img {
+    width: 55px;
+    height: fit-content;
+}
+
+.navbar-container .logo h2 {
+    font-size: 27px;
+    margin: 0;
+    font-weight: 500;
+    background: -webkit-linear-gradient(0deg, rgba(136,114,253,1) 0%, rgba(92,122,215,1) 50%, rgba(107,180,189,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+ul.nav-items {
+    display: flex;
+    gap: 10px;
+}
+
+ul.nav-items li {
+    list-style-type: none;
+}
+
+ul.nav-items li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 21px;
+    border-radius: 10px;
+    transition: all 0.1s;
+    background: white;
+}
+
+ul.nav-items li.active a,
+ul.nav-items li a:hover {
+    transition: all 0.1s;
+    background: linear-gradient(90deg, rgba(39,195,167,1) 0%, rgba(75,191,73,1) 100%);
+    color: white;
+}
+
+.nav-items-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-items-container .sign-up {
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(90deg, rgba(121,95,253,1) 0%, rgba(54,25,202,1) 100%);
+    align-self: initial;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: fit-content;
+}
