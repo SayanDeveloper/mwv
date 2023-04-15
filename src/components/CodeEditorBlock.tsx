@@ -2,6 +2,7 @@ import React from 'react'
 import "../styles/CodeEditorBlock.css"
 import {BsArrowLeftRight, BsChatSquareText, BsChevronRight, BsClipboardData, BsPencil} from "react-icons/bs"
 import {FiChevronRight, FiCopy} from "react-icons/fi"
+import {HiOutlineUserAdd} from "react-icons/hi"
 import openAi from "../assets/openAI.png"
 import { useState } from 'react'
 
@@ -13,13 +14,23 @@ const CodeEditorBlock = () => {
     "The body of the function is a single line of code that prints out the value of 'text'if it is defined, or `Hello World` if it is not defined.",
   ])
 
+  const [activeTab, setActiveTab] = useState("explain")
+
+  const headlines: { [tabName: string]: string } = {
+    explain: "Explain Code",
+    regex: "Regex",
+    convert: "Convert Code",
+    grammar: "Fix Grammar",
+    todo: "Todo"
+  }
+
   return (
     <>
       <div className='code-editor-block-container'>
         <div className='editor-side'>
           <div className='header'>
             <BsChatSquareText fontSize={28} />
-            <div className='header-text'>Explain Code</div>
+            <div className='header-text'>{headlines[activeTab]}</div>
           </div>
           <div className='sub-header'>Explain some code based on the syntax provided</div>
           <div className='text-bold'>Paste your code below:</div>
@@ -60,35 +71,45 @@ const CodeEditorBlock = () => {
         </div>
       </div>
       <div className='options-container'>
-        <div>
-          <button className=''>
-            <BsChatSquareText />
-            <div>Explain Code</div>
-          </button>
-          <button className=''>
-            <div>(.*)</div>
-            <div>Regex</div>
-          </button>
-          <button className=''>
-            <BsArrowLeftRight />
-            <div>Convert Code</div>
-          </button>
+        <div className='programming'>
+          <div className='flex'>
+            <button className={activeTab === "explain" ? "active" : ""} onClick={() => setActiveTab("explain")}>
+              <BsChatSquareText />
+              <div>Explain Code</div>
+            </button>
+            <button className={activeTab === "regex" ? "active" : ""} onClick={() => setActiveTab("regex")}>
+              <div>(.*)</div>
+              <div>Regex</div>
+            </button>
+            <button className={activeTab === "convert" ? "active" : ""} onClick={() => setActiveTab("convert")}>
+              <BsArrowLeftRight />
+              <div>Convert Code</div>
+            </button>
+          </div>
+          <div className='desc-text'>Examples of AI in Programming</div>
+        </div>
+        <div className='content'>
+          <div className="flex">
+            <button className={activeTab === "grammar" ? "active" : ""} onClick={() => setActiveTab("grammar")}>
+              <BsPencil />
+              <div>Fix Grammar</div>
+            </button>
+            <button className={activeTab === "todo" ? "active" : ""} onClick={() => setActiveTab("todo")}>
+              <BsClipboardData />
+              <div>Todo</div>
+            </button>
+          </div>
+          <div className='desc-text'>Examples of AI for Content</div>
         </div>
         <div>
-          <button className=''>
-            <BsPencil />
-            <div>Fix Grammar</div>
-          </button>
-          <button className=''>
-            <BsClipboardData />
-            <div>Todo</div>
-          </button>
-        </div>
-        <div>
-          <img src={openAi} alt="openAI"  style={{height: "40px"}} />
-          <div>Powered By</div>
+          <img src={openAi} alt="openAI" className='openai-logo'  />
+          <div className='desc-text'>Powered By</div>
         </div>
       </div>
+      <button className='free-signup-bottom-btn'>
+        <HiOutlineUserAdd />
+        <div>Free Signup</div>
+      </button>
     </>
   )
 }

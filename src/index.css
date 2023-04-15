@@ -11,6 +11,11 @@ html, body {
   overflow-x: hidden;
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -34,4 +39,12 @@ code {
 
 .text-green {
   color: #009471;
+}
+
+button {
+  transition: all 0.2s;
+}
+button:active {
+  transition: all 0.2s;
+  transform: scale(0.9);
 }

@@ -126,8 +126,70 @@
 }
 
 .options-container {
-    display: flex;
     justify-content: center;
     position: relative;
     z-index: 2;
+    margin-top: 18px;
+}
+
+.options-container .flex,
+.options-container {
+    display: flex;
+    gap: 15px;
+}
+
+.options-container button {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #3011c9;
+    font-weight: 550;
+    margin-bottom: 8px;
+    opacity: 0.6;
+}
+
+.options-container button.active {
+    opacity: 1;
+}
+
+.options-container .desc-text {
+    color: #a998ff;
+    font-size: 13px;
+}
+
+.options-container .openai-logo{
+    height: 39px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    margin-bottom: 5px;
+}
+
+.free-signup-bottom-btn {
+    color: #381bcb;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 12px;
+    font-size: 18px;
+    padding: 13px 28px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+}
+
+.free-signup-bottom-btn:active {
+    transform: translateX(-50%) scale(0.9);
 }
