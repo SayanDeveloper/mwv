@@ -4,10 +4,12 @@ import shape4 from "../assets/shape4.png"
 import shape3 from "../assets/shape3.png"
 import "../styles/Navbar.css"
 import {HiOutlineUserAdd} from "react-icons/hi"
+import MobileNav from './MobileNav'
 
 const Navbar = () => {
   return (
     <div className='navbar'>
+      <MobileNav />
       <div className='navbar-container'>
         <img src={shape4} className='shape4' alt="shape4" />
         <img src={shape3} className='shape3' alt="shape3" />

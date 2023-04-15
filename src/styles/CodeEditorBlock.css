@@ -136,6 +136,8 @@
 .options-container {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .options-container button {
@@ -192,4 +194,32 @@
 
 .free-signup-bottom-btn:active {
     transform: translateX(-50%) scale(0.9);
+}
+
+@media screen and (max-width: 980px) {
+    .code-editor-block-container {
+        flex-direction: column;
+        width: 80vw;
+    }
+    .editor-side {
+        width: calc(100% - 60px) !important;
+        border-right: 0px solid !important;
+    }
+    .output-side {
+        width: calc(100% - 80px) !important;
+    }
+    .options-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 80vw !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .code-editor-block-container {
+        width: 90vw;
+    }
 }

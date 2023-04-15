@@ -88,3 +88,9 @@ ul.nav-items li a:hover {
     gap: 10px;
     height: fit-content;
 }
+
+@media screen and (max-width: 1050px) {
+    .navbar-container {
+        display: none;
+    }
+}

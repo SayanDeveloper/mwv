@@ -8,10 +8,12 @@
   top: 80px;
   right: 10px;
   width: 110px;
+  z-index: -1;
 }
 
 .body-container h1 {
   background: -webkit-linear-gradient(0deg, rgba(60,214,186,1) 0%, rgba(84,169,211,1) 50%, rgba(119,97,251,1) 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 50px;
@@ -63,4 +65,19 @@
   position: absolute;
   width: 180px;
   top: -100px;
+}
+
+@media screen and (max-width: 980px) { 
+  .body-container, .body-container h4 {
+    width: 80vw;
+  }
+  .bottom-container {
+    min-height: 500px;
+    margin-top: -370px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .body-container, .body-container h4 {
+      width: 90vw;
+  }
 }

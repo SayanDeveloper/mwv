@@ -1,6 +1,6 @@
 import React from 'react'
 import "../styles/CodeEditorBlock.css"
-import {BsArrowLeftRight, BsChatSquareText, BsChevronRight, BsClipboardData, BsPencil} from "react-icons/bs"
+import {BsArrowLeftRight, BsChatSquareText, BsClipboardData, BsPencil} from "react-icons/bs"
 import {FiChevronRight, FiCopy} from "react-icons/fi"
 import {HiOutlineUserAdd} from "react-icons/hi"
 import openAi from "../assets/openAI.png"
