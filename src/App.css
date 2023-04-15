@@ -67,6 +67,36 @@
   top: -100px;
 }
 
+.bottom-shapes {
+  height: 50px;
+  width: 200px;
+  right: 0px;
+  overflow-y: hidden;
+  position: absolute;
+  bottom: 0px;
+}
+
+.bottom-circle {
+  background-color: #6e59dc;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: -22px;
+  right: 100px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.bottom-cone {
+  background-color: #6e59dc;
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  bottom: -70px;
+  right: 35px;
+  transform: rotate(45deg);
+}
+
 @media screen and (max-width: 980px) { 
   .body-container, .body-container h4 {
     width: 80vw;

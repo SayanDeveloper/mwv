@@ -19,6 +19,10 @@ function App() {
       </div>
       <div className='bottom-container'>
         <img src={shape1} alt="shape1" className='shape1' />
+        <div className='bottom-shapes'>
+          <div className='bottom-circle'></div>
+          <div className='bottom-cone'></div>
+        </div>
       </div>
     </>
   );
